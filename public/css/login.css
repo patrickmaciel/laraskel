@@ -1,0 +1,17 @@
+/* Utils */
+.center {
+  text-align: center;
+}
+
+/* Layout */
+#body-login {
+  margin-top: 10%;
+}
+
+/* Login form */
+#login-form {
+
+}
+#login-form h1 {
+  margin-bottom: 25px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "projeto.com.br",
+  "version": "1.0.beta",
+  "authors": [
+    "Patrick Maciel <patrickmaciel.info@gmail.com>"
+  ],
+  "description": "Descrição do proje",
+  "keywords": [
+    "veiculos",
+    "uberlandia",
+    "carros",
+    "motos",
+    "caminhoes",
+    "caminhoetes",
+    "minas",
+    "gerais",
+    "brasil"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.projeto.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.0",
+    "less": "~2.0.0"
+  }
+}
