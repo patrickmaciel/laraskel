@@ -11,4 +11,4 @@ Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou 
 
 ## Contribuição
 
-Caso queira contribuir com esse projeto adicionando algum lib que acha importante ou um pacote qualquer, envie um pull request ;)
+Caso queira contribuir com esse projeto adicionando alguma lib que acha importante ou um pacote qualquer, envie um pull request ;)
