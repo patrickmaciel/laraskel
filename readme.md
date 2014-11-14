@@ -1,14 +1,10 @@
-## Projeto - Laravel 4.2.0
+## Laravel 4.2 Base Project
 
-Projeto desenvolvido utilizando:
+Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou presentes:
 
-- Laravel **PHP** framework: 4.2.0
-- Apache 2.4.x
-- PHP 5.6.x
-- MariaDB 5.6.x
+- Laravel 4.2
+- Auth (login/logout)
+- ACL (route name permissions, user x groups)
+- Admin layout com Twitter Bootstrap 3.2 
 
-### Schedule
 
-- [x] Ajustar rotas administrativas
-- [x] Criar módulo de Usuários e suas dependências básicas
-- [x] Configurar autenticação do usuário na administração
