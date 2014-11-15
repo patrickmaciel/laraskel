@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"barryvdh/laravel-ide-helper": "~1.11"
+		"barryvdh/laravel-ide-helper": "~1.11",
+		"smottt/wideimage": "dev-master"
 	},
 	"require-dev": {
 		"way/generators": "~2.0"
@@ -17,6 +18,8 @@
 			"app/models",
 			"app/filters",
 			"app/libraries",
+			"app/macros",
+			"app/viewComposers",
 			"app/services",
 			"app/database/migrations",
 			"app/database/seeds",
