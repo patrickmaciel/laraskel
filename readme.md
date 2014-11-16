@@ -11,6 +11,7 @@ Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou 
 - Image Uploader (WideImage)
 - Macros
 - Custom Libraries
+- Bower
 
 ## Como usar item deste projeto?
 
@@ -45,6 +46,17 @@ Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou 
 ### Custom Libraries
 
 *Em breve instruções*
+
+### Bower
+
+*Em breve instruções*
+
+- jQuery
+- Twitter Bootstrap
+- Less
+- Bootbox
+- Fontawesome
+
 
 ---
 
