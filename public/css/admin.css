@@ -3,6 +3,27 @@ body {
   padding: 80px 0 30px 0;
 }
 
+li.alert-default form button,
+li.alert-default form a,
+li.alert-default a,
+li.alert-primary form button,
+li.alert-primary form a,
+li.alert-primary a,
+li.alert-info form button,
+li.alert-info form a,
+li.alert-info a,
+li.alert-success form button,
+li.alert-success form a,
+li.alert-success a,
+li.alert-danger form button,
+li.alert-danger form a,
+li.alert-danger a,
+li.alert-warning form button,
+li.alert-warning form a,
+li.alert-warning a {
+  color: #FFF!important;
+}
+
 /* Utils */
 .no-margin {
   margin: 0;
@@ -47,4 +68,9 @@ body {
 /* Form */
 .form-button {
   display: inline;
+}
+
+/* Table */
+.th-actions {
+  min-width: 160px;
 }

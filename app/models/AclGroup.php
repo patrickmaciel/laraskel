@@ -45,6 +45,12 @@ class AclGroup extends BaseModel
   | -----------------------------------------------------------------------------
   */
 
+  /**
+   * get a list of groups for html select
+   * @param  integer $onlyActives only active groups?
+   * @param  boolean $optional    key value with optional message?
+   * @return mixed
+   */
   public static function getList($onlyActives = 1, $optional = false)
   {
     $data = false;
@@ -60,6 +66,16 @@ class AclGroup extends BaseModel
 
     return $data;
 
+  }
+
+  /**
+   * Get an group by id (show view)
+   * @param  integer $id Group id
+   * @return Eloquent
+   */
+  public static function getById($id)
+  {
+    return static::findOrFail($id);
   }
 
 }

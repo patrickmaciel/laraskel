@@ -58,7 +58,8 @@ Route::group([
 	Route::get('/', ['as' => 'admin', 'uses' => 'AdminController@dashboard']);
 
 	Route::resource('admin', 'AdminController');
-	Route::resource('users', 'UsersController');
+  Route::resource('users', 'UsersController');
+	Route::resource('acl_groups', 'AclGroupsController');
 	Route::resource('individuals', 'IndividualsController');
 
 });
