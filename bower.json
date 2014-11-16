@@ -30,6 +30,8 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "bootstrap": "~3.3.0",
-    "less": "~2.0.0"
+    "less": "~2.0.0",
+    "fontawesome": "~4.2.0",
+    "bootbox": "~4.3.0"
   }
 }
