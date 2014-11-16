@@ -10,9 +10,9 @@
 
     <title>
       @if (empty($title))
-        Login - Meu Veículo
+        Login - Projeto
       @else
-        {{ $title }} - Meu Veículo
+        {{ $title }} - Projeto
       @endif
     </title>
 
