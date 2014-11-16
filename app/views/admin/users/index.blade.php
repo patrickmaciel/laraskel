@@ -34,14 +34,15 @@
               <td>{{ Libraries\FormatDate::format('d/m/Y H:i:s', $user->created_at) }}</td>
               <td>{{ Libraries\FormatDate::format('d/m/Y H:i:s', $user->updated_at) }}</td>
               <td>
-                <a class="btn btn-info" href="{{ URL::route('admin.users.show', $user->id) }}">Ver</a>
-                <!-- /.btn btn-info -->
-                <a class="btn btn-warning" href="{{ URL::route('admin.users.edit', $user->id) }}">Editar</a>
-                <!-- /.btn btn-warning -->
+                <a class="btn btn-info" href="{{ URL::route('admin.users.show', $user->id) }}"><i class="fa fa-eye"></i></a>
+
+                <a class="btn btn-warning" href="{{ URL::route('admin.users.edit', $user->id) }}"><i class="fa fa-pencil"></i></a>
+
                 {{ Form::open(['route' => ['admin.users.destroy', $user->id], 'class' => 'form-button', 'method' => 'delete']) }}
-                  {{ Form::submit('Excluir', ['class' => 'btn btn-danger bootbox-confirm-default']) }}
+                  <button type='submit' class="btn btn-danger bootbox-confirm-default">
+                    <i class="fa fa-trash"></i>
+                  </button>
                 {{ Form::close() }}
-                <!-- /.btn btn-danger -->
               </td>
             </tr>
              @endforeach
