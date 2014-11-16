@@ -16,23 +16,23 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::get('/acesso-negado', ['as' => 'user.denied', 'uses' => 'App\\Controllers\\Admin\\AdminController@denied']);
-
-Route::group(['before' => ['auth', 'acl.permitted']], function() {
-	Route::get('/admin', ['as' => 'admin', 'uses' => 'App\\Controllers\\Admin\\AdminController@dashboard']);
-	Route::get('/individuals', ['as' => 'panel.individuals', 'uses' => 'App\\Controllers\\Admin\\AdminController@individuals']);
-	Route::get('/entities', ['as' => 'panel.entities', 'uses' => 'App\\Controllers\\Admin\\AdminController@entities']);
-
-	Route::get('/destroy', ['as' => 'admin.users.destroy', 'uses' => 'App\\Controllers\\Admin\\AdminController@destroy']);
-	Route::get('/reports', ['as' => 'admin.reports', 'uses' => 'App\\Controllers\\Admin\\AdminController@reports']);
-	Route::get('/payments', ['as' => 'admin.payments', 'uses' => 'App\\Controllers\\Admin\\AdminController@payments']);
-});
-
-Route::get('secret', [
-	'before' => ['auth', 'acl.permitted'],
-	'as' => 'user.secret',
-	'uses' => 'UsersController@secret'
-]);
+//Route::get('/acesso-negado', ['as' => 'user.denied', 'uses' => 'Admin\\AdminController@denied']);
+//
+//Route::group(['before' => ['auth', 'acl.permitted']], function() {
+//	Route::get('/admin', ['as' => 'admin', 'uses' => 'Admin\\AdminController@dashboard']);
+//	Route::get('/individuals', ['as' => 'panel.individuals', 'uses' => 'Admin\\AdminController@individuals']);
+//	Route::get('/entities', ['as' => 'panel.entities', 'uses' => 'Admin\\AdminController@entities']);
+//
+//	Route::get('/destroy', ['as' => 'admin.users.destroy', 'uses' => 'Admin\\AdminController@destroy']);
+//	Route::get('/reports', ['as' => 'admin.reports', 'uses' => 'Admin\\AdminController@reports']);
+//	Route::get('/payments', ['as' => 'admin.payments', 'uses' => 'Admin\\AdminController@payments']);
+//});
+//
+//Route::get('secret', [
+//	'before' => ['auth', 'acl.permitted'],
+//	'as' => 'user.secret',
+//	'uses' => 'UsersController@secret'
+//]);
 
 /*
  |--------------------------------------------------------------------------
@@ -49,14 +49,16 @@ Route::get('/logout', ['as' => 'logout', 'uses' => 'UsersController@logout']);
 |--------------------------------------------------------------------------
 */
 Route::group([
-	'namespace' => 'App\\Controllers\\Admin',
+	'namespace' => 'Admin',
 	'prefix' => 'admin',
-	'before' => 'auth.admin'
+	'before' => 'auth'
 ], function()
 {
 
-//	Route::get('/', ['as' => 'admin', 'uses' => 'AdminController@dashboard']);
+	Route::get('/', ['as' => 'admin', 'uses' => 'AdminController@dashboard']);
 
 	Route::resource('admin', 'AdminController');
+	Route::resource('users', 'UsersController');
+	Route::resource('individuals', 'IndividualsController');
 
 });

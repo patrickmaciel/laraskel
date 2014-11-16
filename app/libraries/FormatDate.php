@@ -1,5 +1,7 @@
-<?php 
+<?php
 namespace Libraries;
+
+use DateTime;
 
 class FormatDate {
 
@@ -8,7 +10,7 @@ class FormatDate {
    * Formata uma data baseado em uma pattern informada
    *
    * @access public
-   * @param String $pattern - formato da data
+   * @param String $format - formato da data
    * @param Date/DateTime $date - data no formato date ou datetime
    * @return String
    * @since 1.0
@@ -16,9 +18,14 @@ class FormatDate {
    * @author Patrick Maciel
    * @todo todo
    */
-  public static function format($pattern, $date)
+  public static function format($format, $date)
   {
-    return date($pattern, strtotime($date));
+    $d = DateTime::createFromFormat($format, $date);
+    if ($d && $d->format($format) == $date) {
+      return date($format, strtotime($date));
+    }
+
+    return '-';
   }
 
 }

@@ -18,8 +18,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ URL::asset('bower/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
     <!-- Bootstrap theme -->
     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('bower/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet">
@@ -34,8 +36,8 @@
   <body role="document">
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Abrir menu</span>
@@ -43,7 +45,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Projeto</a>
+          <a class="navbar-brand" href="#">Meu Veículo</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

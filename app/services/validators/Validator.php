@@ -1,5 +1,5 @@
 <?php
-namespace App\Services\Validators;
+namespace Validators;
 
 abstract class Validator {
 

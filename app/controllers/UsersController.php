@@ -1,6 +1,6 @@
 <?php
 
-use App\Services\Validators\LoginValidator;
+use Validators\LoginValidator;
 
 class UsersController extends BaseController {
 

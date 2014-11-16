@@ -40,4 +40,26 @@ class AclGroup extends BaseModel
     return $this->belongsToMany('AclPermission', 'acl_group_permissions', 'group_id', 'permission_id');
   }
 
+  /* ----------------------------------------------------------------------------
+  | Custom queries
+  | -----------------------------------------------------------------------------
+  */
+
+  public static function getList($onlyActives = 1, $optional = false)
+  {
+    $data = false;
+    if ($onlyActives) {
+      $data = static::active()->lists('name', 'id');
+    } else {
+      $data = static::lists('name', 'id');
+    }
+
+    if ($optional) {
+      $data = ['' => 'Selecione'] + $data;
+    }
+
+    return $data;
+
+  }
+
 }

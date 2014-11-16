@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Admin;
+namespace Admin;
 
 use BaseController;
 use View;

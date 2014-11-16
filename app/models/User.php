@@ -23,6 +23,20 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+  /* ----------------------------------------------------------------------------
+  | Mutator
+  | -----------------------------------------------------------------------------
+  */
+
+  /**
+   * Active mutator
+   * @param boolean $value
+   */
+  public function setActiveAttribute($value)
+  {
+    return $this->attributes['active'] = (empty($value) ? 0 : 1);
+  }
+
 	/*
 	 |--------------------------------------------------------------------------
 	 | Relationships
