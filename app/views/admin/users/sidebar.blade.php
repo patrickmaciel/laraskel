@@ -12,7 +12,13 @@
       </div>
       <div class="navbar-collapse collapse sidebar-navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class='active'>
+          <li>
+            <a href="{{ URL::route('admin.users.index') }}">
+              <i class="fa fa-th-list"></i>
+              Listar Usuários
+            </a>
+          </li>
+          <li>
             <a href="{{ URL::route('admin.users.create') }}">
               <i class="fa fa-plus"></i>
               Novo Usuário

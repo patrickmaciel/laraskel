@@ -3,51 +3,12 @@
 @section('content')
 
 <div class="container-fluid">
+
+  @include ('partials.session_alerts')
+
   <div class="row">
-    <div class="col-lg-2">
-      <div class="well">
-        <ul class="nav nav-pills nav-stacked">
-          <li>
-            <a class="btn btn-primary" href="{{ URL::route('admin.users.create') }}">
-              <i class="fa fa-plus"></i>
-              <!-- /.fa fa-plus -->
-              Novo Usuário
-            </a>
-          </li>
-          <li>
-            <a class="btn btn-default" href="{{ URL::route('admin.users.create') }}">
-              <i class="fa fa-filter"></i>
-              <!-- /.fa fa-filter -->
-              Filtrar
-            </a>
-          </li>
-          <li>
-            <a class="btn btn-default" href="{{ URL::route('admin.users.create') }}">
-              <i class="fa fa-check-square"></i>
-              <!-- /.fa fa-check-square -->
-              Ativos
-            </a>
-          </li>
-          <li>
-            <a class="btn btn-default" href="{{ URL::route('admin.users.create') }}">
-              <i class="fa fa-minus-square"></i>
-              <!-- /.fa fa-minus-square -->
-              Inativos
-            </a>
-          </li>
-          <li>
-            <a class="btn btn-default" href="{{ URL::route('admin.users.create') }}">
-              <i class="fa fa-trash"></i>
-              <!-- /.fa fa-close -->
-              Excluídos
-            </a>
-          </li>
-        </ul>
-        <!-- /.nav nav-pills nav-stacked -->
-      </div>
-      <!-- /.well -->
-    </div>
-    <!-- /.col-lg-4 -->
+
+    @include ('admin.users.sidebar')
 
     <div class="col-lg-10">
 
@@ -77,14 +38,23 @@
                 <!-- /.btn btn-info -->
                 <a class="btn btn-warning" href="{{ URL::route('admin.users.edit', $user->id) }}">Editar</a>
                 <!-- /.btn btn-warning -->
-                <a class="btn btn-danger" href="{{ URL::route('admin.users.destroy', $user->id) }}">Excluir</a>
+                {{ Form::open(['route' => ['admin.users.destroy', $user->id], 'class' => 'form-button', 'method' => 'delete']) }}
+                  {{ Form::submit('Excluir', ['class' => 'btn btn-danger bootbox-confirm-default']) }}
+                {{ Form::close() }}
                 <!-- /.btn btn-danger -->
               </td>
             </tr>
              @endforeach
           </tbody>
         </table>
-        <!-- /.table -->
+
+        <div class="row">
+          <div class="col-lg-12 center">
+            <div class="pagination no-margin">
+              {{ $users->appends(Input::except('page'))->links(); }}
+            </div>
+          </div>
+        </div>
       </fieldset>
 
 

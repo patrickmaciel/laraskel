@@ -53,4 +53,19 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 		return $this->belongsToMany('AclGroup', 'acl_user_groups', 'user_id', 'group_id');
 	}
 
+  /* ----------------------------------------------------------------------------
+  | Custom queries
+  | -----------------------------------------------------------------------------
+  */
+
+  /**
+   * Get an user by id (show view)
+   * @param  integer $id User id
+   * @return Eloquent
+   */
+  public static function getById($id)
+  {
+    return static::with('groups')->findOrFail($id);
+  }
+
 }

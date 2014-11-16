@@ -7,7 +7,7 @@ class UserValidator extends Validator {
   public static $rules = array(
     'group_id' => 'required',
     'email' => 'required|email|unique:users',
-    'password' => 'required'
+    'password' => 'sometimes|required'
   );
 
   public static $messages = array(
