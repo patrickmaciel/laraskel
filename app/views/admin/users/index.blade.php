@@ -8,7 +8,7 @@
 
   <div class="row">
 
-    @include ('admin.users.sidebar')
+    @include ('admin.partials.sidebar', ['plural' => 'Usuários', 'singular' => 'Usuário', 'resource' => 'users'])
 
     <div class="col-lg-10">
 
