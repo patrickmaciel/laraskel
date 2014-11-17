@@ -1,6 +1,8 @@
 .idea
+_ide_helper.php
 /docs
 /bootstrap/compiled.php
+/public/bower/**
 /vendor
 composer.phar
 composer.lock
