@@ -66,7 +66,7 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'projeto_database',
+			'database' => 'laraskel',
 			'username' => 'root',
 			'password' => 'dev',
 			'charset'  => 'utf8',

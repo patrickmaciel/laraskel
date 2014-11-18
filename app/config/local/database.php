@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'herbert_meuveiculo',
+			'database'  => 'laraskel',
 			'username'  => 'root',
 			'password'  => 'dev',
 			'charset'   => 'utf8',
