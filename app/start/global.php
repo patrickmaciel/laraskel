@@ -31,7 +31,9 @@ ClassLoader::addDirectories(array(
 |
 */
 
-Log::useFiles(storage_path().'/logs/laravel.log');
+$logFile = 'laravel.log';
+// Log::useFiles(storage_path().'/logs/laravel.log');
+Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +67,7 @@ App::error(function(Exception $exception, $code)
 App::down(function()
 {
 	return Response::make("Be right back!", 503);
+    // return Response::view('maintenance', array(), 503);
 });
 
 /*
@@ -79,3 +82,6 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+#app\start\global.php
+require_once app_path() . '/logger.php';
