@@ -1,11 +1,12 @@
 ## Laravel 4.2 Base Project
 
-Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou presentes:
+Boilerplate para criar qualquer projeto em Laravel 4.2, com os seguintes itens já configurados e/ou presentes:
 
 - Laravel 4.2
 - Auth (login/logout)
 - ACL (route name permissions, user x groups)
-- Admin layout com Twitter Bootstrap 3.2
+- Country, States and Cities migration and seeds
+- Admin layout com Twitter Bootstrap 3.2 + Bootswatch theme
 - Jeffrey Way generators
 - IDE Helper
 - Image Uploader (WideImage)
@@ -13,7 +14,9 @@ Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou 
 - Custom Libraries
 - Bower
 
-## Como usar item deste projeto?
+## Como usar este projeto?
+
+*Em breve instruções*
 
 ### Auth
 
@@ -63,3 +66,7 @@ Projeto base/modelo em Laravel 4.2 com os seguintes itens já configurados e/ou 
 ## Contribuição
 
 Caso queira contribuir com esse projeto adicionando alguma lib que acha importante ou um pacote qualquer, envie um pull request ;)
+
+## Dúvidas?
+
+Me envia um e-mail ai :) **patrickmaciel.info [at] gmail.com**
