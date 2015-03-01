@@ -7,7 +7,7 @@
 
   <div class="row">
 
-    @include ('admin.partials.sidebar', ['plural' => 'Grupos', 'singular' => 'Grupo', 'resource' => 'acl_groups', 'id' => $acl_group->id, 'edit' => true, 'destroy' => true ])
+    @include ('admin.acl_groups.sidebar', ['plural' => 'Grupos', 'singular' => 'Grupo', 'resource' => 'acl_groups', 'id' => $acl_group->id, 'edit' => true, 'destroy' => true ])
 
     <div class="col-lg-10">
       <fieldset>

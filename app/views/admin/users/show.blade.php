@@ -7,7 +7,7 @@
 
   <div class="row">
 
-    @include ('admin.partials.sidebar', ['plural' => 'Usuários', 'singular' => 'Usuário', 'resource' => 'users', 'id' => $user->id, 'edit' => true, 'destroy' => true ])
+    @include ('admin.users.sidebar', ['plural' => 'Usuários', 'singular' => 'Usuário', 'resource' => 'users', 'id' => $user->id, 'edit' => true, 'destroy' => true ])
 
     <div class="col-lg-10">
       <fieldset>
