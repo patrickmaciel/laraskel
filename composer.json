@@ -6,10 +6,15 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"barryvdh/laravel-ide-helper": "~1.11",
-		"smottt/wideimage": "dev-master"
+		"smottt/wideimage": "dev-master",
+        "laravel/envoy": "~1.0",
+        "paypal/adaptivepayments-sdk-php":"2.*",
+        "facebook/php-sdk-v4": "~4.0",
+        "facebook/php-sdk": "~3.2"
 	},
 	"require-dev": {
-		"way/generators": "~2.0"
+		"way/generators": "~2.0",
+        "itsgoingd/clockwork": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -24,7 +29,10 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+        ],
+        "files": [
+            "app/helpers.php"
+        ]
 	},
 	"scripts": {
 		"post-install-cmd": [
